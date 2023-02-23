@@ -1,0 +1,56 @@
+JOC DE PROVES 3: Funcions de blocs de celles
+
+Pas 0:
+	Carregar fitxer Joc3
+	
+Context del full:
+	
+	- De la A0 a la B3, dades numeriques 
+	- De la D0 a la E3, dades numeriques i alfabetiques
+	- J0 conte la formula =SUM(1;A0)
+	
+	
+	
+Proves a fer:
+
+	1. Funcio de Modificar: Clicar al boto de Blocs, i seleccionar el boto Modificar:
+		- Introduir les coordenares A0;B3 i el input "hola" -> A0;B3;Hola
+		Resultat: La regio passa a tindre Hola com a contingut
+		
+	2. Funcio de Copiar: Clicar al boto de Blocs, i seleccionar el boto Copiar:
+		- Introduir les coordenares D0;E3
+		Resultat: La regio passa a estar copiada internament
+		
+	3. Funcio de Enganxar: Clicar al boto de Blocs, i seleccionar el boto Enganxar:
+		- Introduir la coordenada G0 
+		Resultat: El bloc previament copiar s'escriu a partir de la cella indicada
+			
+	4. Funcio de Substituir: Clicar al boto de Blocs, i seleccionar el boto Substituir:
+		- Introduir les coordenares D0;E3, el valor a cambiar i el nou valor -> A0;B3;1;0
+		Resultat: El valor a cambiar ara es el nou valor dins el bloc seleccionat
+		
+	5. Funcio de Esborra: Clicar al boto de Blocs, i seleccionar el boto Esborrar:
+		- Introduir les coordenares G0;H3
+		Resultat: El bloc seleccionat queda buit
+		
+	6. Funcio de Buscar: Clicar al boto de Blocs, i seleccionar el boto Buscar:
+		- Introduir les coordenares A0;H3 i el valor a buscar -> A0;H3;Berta
+		Resultat: Es mostra el numero de vegades que el valor a buscar esta en la regio	
+		
+	7. Funcio de Ordenar: Clicar al boto de Blocs, i seleccionar el boto Ordenar:
+		- Introduir les coordenares A0;H3 i el criteri -> A0;H3;COLUMNA-DESCENDENT
+		Resultat: S'ordena el bloc seleccionat segons el criteri. En aquest cas, segons els valors de la primera columna, de forma descendent
+		
+	8. Funcio de Aplicar Funcio: Clicar al boto de Blocs, i seleccionar el boto Aplicar Funcio:
+		- Introduir les coordenares J0;J3
+		Resultat: S'ha aplicat la funcio de la primera cella de la columna a la resta, modificant les referencies
+		
+	9. Funcio de Moure: Clicar al boto de Blocs, i seleccionar el boto Moure:
+		- Introduir les coordenares J0;J3 i la primera cella a on mourem el bloc -> J0;J3;K0
+		Resultat: S'ha mogut el bloc a partir de la cella 
+	
+Casos erronis:
+
+	Qualsevol possible error fara que es mostri un PopUp avisant, i no es realitzara la funcio
+			
+En base a aquest casos basics explicats, es poden fer les proves incrementalment mes complexes.

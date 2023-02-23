@@ -1,0 +1,38 @@
+JOC DE PROVES 2: Referencies dinamiques
+
+Pas 0:
+	Carregar fitxer Joc2
+	
+Context del full:
+	
+	- La cella B0 esta apuntant a C0: input que hi ha B0 "=C0"
+	- La cella B1 esta apuntant a C1: input que hi ha B1 "=C1"
+	- La cella B2 esta apuntant a C2: input que hi ha B2 "=C2"
+
+Proves a fer:
+
+	1. Canviar la cella C0
+		Resultat: B0 es igual a C0
+		
+	2. Posar que C1 apunti a B1: input a posar a C1 "=B1"
+		Resultat: Missatge d'error -> "Error al fer la referencia: bucles no admesos"
+			Aquest error passarà amb qualsevol bucle de referencia, sigui quina sigui la distancia
+			
+	3. Posar a B0 una funcio amb referencies: input de B0 "=MUL(10;C0)"
+		Resultat: 	Si C0 es una referencia amb un valor valid per a la funcio de B0, B0 mostrara el resultat.
+					Si C0 no es una referencia amb un valor valid per a la funcio de B0, 
+		Si ara es canvia C0	per una dada valida, B0 s'actualitzara 
+		Si es una dada invalida C0 mantindra el valor antic
+	
+Casos erronis:
+
+	1. Referenciar una cella inexistent:
+		Resultat: Es mostra el missatge d'error adient per a fila o columna inexistent
+		
+	2. El input es erroni o no es una referencia:
+		Exemples:
+			"=" 	Missatge d'error -> "Funcio incompleta"
+			"c=2"	La cella mostra "c=2" perque es un paraula valida
+			"=C"	Missatge d'error -> "El contingut introduit no es una funcio valida"
+			
+En base a aquest casos basics explicats, es poden fer les proves incrementalment mes complexes.

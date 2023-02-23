@@ -1,0 +1,62 @@
+JOC DE PROVES 4: format de caselles i blocs
+
+Pas 0:
+	Carregar fitxer Joc4
+
+
+Context del full:
+
+	- Les caselles B1 a D4 s'han pintat de blau
+	- Les caselles F1 a H4 s'han pintat de verd
+	- Les caselles J1 a L4 s'han pintat de vermell
+	- Les caselles N0 a P3 s'han pintat de groc
+	- A la casella C6 hi ha escrit "Blau" en negreta
+	- A la casella G6 hi ha escrit "Verd" en cursiva
+	- A la casella K6 hi ha escrit "Vermell" en negreta i cursiva
+	- A la casella O6 hi ha escrit "Groc" en negreta, cursiva i mida 15
+
+Proves a fer:
+
+	1. Pintar el bloc B8 a D12 de color groc
+
+		S'ha de premer el boto "Pintar" i introduir-hi: B8;D12;4
+
+	2. Pintar el bloc F8 a H12 de color vermell
+
+		S'ha de premer el boto "Pintar" i introduir-hi: F8;H12;3
+
+	3. Pintar el bloc J8 a L12 de color verd
+
+		S'ha de premer el boto "Pintar" i introduir-hi: J8;L12;2
+
+	4. Pintar el bloc N8 a P12 de color blau
+
+		S'ha de premer el boto "Pintar" i introduir-hi: N8;P12;1
+
+	5. Escriure 1 en negreta a C14
+
+		Escriure 1 i premer ENTER. Tornar a seleccionar (mode d'escriptura pero sense modificar res)
+		la casella i premer ENTER. Premer el boto B.
+
+	6. Escriure 2 en cursiva a G14
+
+		Escriure 2 i premer ENTER. Tornar a seleccionar la casella i premer ENTER. Premer el boto I.
+
+	7. Escriure 3 en negreta i cursiva a K14
+
+		Escriure 3 i premer ENTER. Tornar a seleccionar la casella i premer ENTER. Premer el boto B.
+		Tornar a seleccionar la casella i premer ENTER. Premer el boto I.
+
+	8. Escriure 4 en negreta, cursiva i mida 15 a O14
+
+		Escriure 4 i premer ENTER. Tornar a seleccionar la casella i premer ENTER. Premer el boto B.
+		Tornar a seleccionar la casella i premer ENTER. Premer el boto I. Tornar a seleccionar la casella
+		i premer ENTER. Premer el boto Mida i introduir-hi el valor 15.
+
+Casos erronis:
+
+	1. Intentar pintar el bloc D8 a B12 de color blanc
+
+		S'ha de premer el boto "Pintar" i introduir-hi: D8;B12;0
+
+		Saltara l'error: El rang seleccionat es negatiu

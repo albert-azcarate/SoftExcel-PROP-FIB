@@ -1,0 +1,275 @@
+JOC DE PROVES 1: operacions matematiques sense referencies
+
+Pas 0:
+	Carregar fitxer Joc1
+
+Context del full:
+
+	- Les celles A0 a I0 son els noms de les columnes dels subjectes de la prova
+	- Les celles A1 a A23 serveixen d'index de la funcio que s'hi efectua
+	- Les celles B1 a B23 indiquen la denominacio de la funcio, sense ser efectiva
+	- Les celles C1 a E23 indiquen els atributs que se li donen a la funcio, sense ser efectius
+	- Les celles F1 a F23 mostren els resultats de l'aplicacio de les formules
+	- Les celles G0 a I0 donen propostes d'atributs a donar a la mateixa funcio per tal que surti un error
+
+Operacions ja donades: 
+
+	* Si s'entra en mode d'edicio d'una de les celles sota Resultat (F1 a F23) i es prem enter
+	sense haver-la editat es pot observar la formula responsable del valor en pantalla a la dreta de tot
+	dels botons.
+
+	1. TRUNCDEC: es trunca 1.25 perque tingui 1 xifra decimal
+
+		=TRUNCDEC(1.25;1)
+
+			Resultat: 1.2
+
+	2. TRUNCINT: es trunca 1.25 al seu valor enter
+	
+		=TRUNCINT(1.25)
+	
+			Resultat: 1
+	
+	3. CONVDEC: es converteix 1.25 perque es representi amb una ','
+	
+		=CONVDEC(1.25)
+
+			Resultat: 1,25
+
+	4. CONVBASE: es converteix 125 a binari
+
+		=CONVBASE(125;B)
+
+			Resultat: 
+
+	5. INC: s'incrementa 125 en 5 unitats
+
+		=INC(125;5)
+		
+			Resultat: 130
+
+	6. ABS: es converteix -12.5 al seu valor absolut
+
+		=ABS(-12.5)
+
+			Resultat: 12.5
+
+	7. SUM: se suma 1 + 2 + 3 + 5 + 6 + 7 + 8 + 9 + 10
+
+		=SUM(1;2;3;4;5;6;7;8;9;10)
+
+			Resultat: 55
+
+	8. RES: es resta 12 - 5
+
+		=RES(12;5)
+
+			Resultat: 7
+
+	9. MUL: es multiplica 1 * 2 * 3 * 5 * 6 * 7 * 8 * 9 * 10
+
+		=MUL(1;2;3;4;5;6;7;8;9;10)
+
+			Resultat: 3628800
+
+	10. DIV: es divideix 1.0/2.0
+
+		=DIV(1.0;2.0)
+
+			Resultat: 0.5
+
+	11. DATELEM: es pren el dia de la data 30/05/2022
+	
+		=DATELEM(30/05/2022;D)
+
+			Resultat: 30
+
+	12. DATADIA: es retorna el dia de la setmana de la data 30/05/2022
+
+		=DATADIA(30/05/2022)
+
+			Resultat: Dilluns
+
+	13. REECAR: se substitueixen totes les o per a del text Aprovar
+
+		=REECAR(Aprovar;o;a)
+
+			Resultat: Apravar
+
+	14. MINMAJ: es passa tot el text Aprovar a majuscules
+
+		=MINMAJ(Aprovar;M)
+		
+			Resultat: APROVAR
+
+	15. NUMCAR: es compta el nombre de caracters al text Aprovar
+
+		=NUMCAR(Aprovar)
+
+			Resultat: 7
+
+	16. NUMCON: es compta el nombre d'ocurrencies de la lletra a (estrictament minuscula) dins el text Aprovar
+
+		=NUMCON(Aprovar;a)
+
+			Resultat: 1
+	
+	17. MIT: es fa la mitjana entre 1, 2, 3, 4 i 5
+
+		=MIT(1;2;3;4;5)
+
+			Resultat: 3
+
+	18. MED: es fa la mediana entre 1, 2, 3, 4 i 5
+
+		=MED(1;2;3;4;5)
+
+			Resultat: 3
+
+	19. VAR: es fa la variança entre 1, 2, 3, 4 i 5
+
+		=VAR(1;2;3;4;5)
+
+			Resultat: 2
+
+	20. STDEV: es fa la desvacio estandard entre 1, 2, 3, 4 i 5
+
+		=STDEV(1;2;3;4;5)
+
+			Resultat: 1
+
+	21. COVAR: es fa la covariança entre 1, 2, 3 i 4, 5 i 6
+
+		=COVAR(1;2;3|4;5;6)
+
+			Resultat: 1
+
+	22. PEARSON: es fa el coeficient de Pearson entre 1, 2, 3 i 4, 5 i 6
+
+		=PEARSON(1;2;3|4;5;6)
+
+			Resultat: 1
+
+	23. COMPLEXA: es multiplica 1 * 2 * 3 i aquesta se suma a 4 + 5 + 6
+
+		=SUM(MUL(1;2;3);4;5;6)
+
+			Resultat: 21
+
+Casos erronis:
+
+	1. TRUNCDEC: s'intenta truncar 1.25 perque tingui 1.25 xifres decimals
+
+		=TRUNCDEC(1.25;1.25)
+
+			Error: TRUNCDEC: la quantitat de xifres decimals indicada a deixar despres de truncar ha de ser un valor enter.
+
+	2. TRUNCINT: s'intenta truncar A als veu valor enter
+	
+		=TRUNCINT(A)
+	
+			Error: TRUNCINT: no es pot truncar una dada a enter que no sigui decimal. Has introduit T.
+	
+	3. CONVDEC: s'intenta aplicar la formula a A,B
+	
+		=CONVDEC(A,B)
+
+			Error: CONVDEC: no es pot convertir una dada que no sigui decimal. Has introduit T.
+
+	4. CONVBASE: s'intenta convertir 0b1111101 a binari
+
+		=CONVBASE(0b1111101;B)
+
+			Error: CONVBASE: no es pot convertir la dada al tipus B.
+
+	5. INC: s'intenta incrementar 125 en 30/05/2022 unitats
+
+		=INC(125;30/05/2022)
+		
+			Error: INC: la quantitat d'increments ha de ser un numero (decimal o enter).
+
+	6. ABS: es vol convertir 0b1111101 al seu valor absolut
+
+		=ABS(0b1111101)
+
+			Error: ABS: no es pot calcular el valor absolu d'una dada que no sigui decimal o entera. Has introduit B.
+
+	7. SUM: es vol sumar 1 + 2 + 3 + 5 + 6 + A + 8 + 9 + 10
+
+		=SUM(1;2;3;4;5;6;A;8;9;10)
+
+			Error: La dada A no es un numero.
+
+	8. RES: idem a SUM
+
+	9. MUL: idem a SUM
+
+	10. DIV: es vol dividir 1.0/0
+
+		=DIV(1.0;0)
+
+			Error: DIV: el divident no pot ser zero.
+
+	11. DATELEM: es vol prendre el mes del text Maig
+	
+		=DATELEM(Maig;M)
+
+			Error: DATELEM: no es pot aplicar una operacio de data a una dada que no sigui una data. Has introduit T.
+
+	12. DATADIA: es vol saber quin dia de la setmana es el text Dilluns
+
+		=DATADIA(Dilluns)
+
+			Error: DATADIA: no es pot aplicar una operacio de data a una dada que no sigui una data. Has introduit T.
+
+	13. REECAR: se volen substituir totes les o per a del numero 125
+
+		=REECAR(125;o;a)
+
+			Error: REECAR: no es pot substituir text d'una dada que no sigui un text. Has introduit E.
+
+	14. MINMAJ: es vol posar la data 30/05/2022 a minuscules
+
+		=MINMAJ(30/05/2022;m)
+		
+			Error: MINMAJ: no es pot substituir text d'una dada que no sigui un text. Has introduit D.
+
+	15. NUMCAR: es vol comptar el nombre de caracters al numero 123,456
+
+		=NUMCAR(123,456)
+
+			Error: NUMCAR: no es poden comptar els caracters d'una dada que no sigui un text. Has introduit N.
+
+	16. NUMCON: es vol comptar el nombre de caracters A (estrictament majusculs) al valor hexadecimal 0xABBA
+
+		=NUMCON(0xABBA;A)
+
+			Error: NUMCON: no es poden comptar les coincidencies d'una dada que no sigui un text. Has introduit H.
+	
+	17. MIT: es vol fer la mitjana entre 1, 0xABBA, 3, 4 i 5
+
+		=MIT(1;0xABBA;3;4;5)
+
+			Error: La dada 0xABBA no es un numero.
+
+	18. MED: idem a MIT.
+
+	19. VAR: idem a MIT.
+
+	20. STDEV: idem a MIT.
+
+	21. COVAR: es fa la covariança entre 1, 2, 3 i 4 i 5
+
+		=COVAR(1;2;3|4;5)
+
+			Error: COVAR: cal que l'operacio estadistica tingui mes d'un valor a cada conjunt, i que ambdos conjunts siguin de la mateixa mida.
+
+	22. PEARSON: idem a COVAR.
+
+	23. COMPLEXA: es vol ver la covariancia de 1, 2 i 3 i 4, 5 i 6, i aquesta se sumaria a 4 + 5 + 6
+
+		=SUM(COVAR(1;2;3|4;5;6);4;5;6)
+
+			Error: Les funcions compostes no admeten les operacions COVAR ni PEARSON.
+
+En base a aquest casos basics explicats, es poden fer les proves incrementalment mes complexes.
