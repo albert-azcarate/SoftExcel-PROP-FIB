@@ -4,7 +4,7 @@ This repository contains a Java implementation of a basic Excel application. The
 
 ## Usage
 
-To use the application, simply download the source code and compile it using Java. Once compiled, you can run the application by executing the `Excel` class.
+To use the application, simply download the source code and compile it using Java.
 
 ## Features
 
