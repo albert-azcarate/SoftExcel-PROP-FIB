@@ -14,6 +14,10 @@ The application includes the following features:
 - **Block operations:** The application supports block operations, such as copying a block of cells and pasting it to a new location.
 - **Recursive parser:** The application includes a recursive parser to evaluate formulas, allowing users to enter complex equations and receive accurate results.
 
+## Usage
+
+You can check how to use it and all of the features in the PDF manualUsuari
+
 ## Limitations
 
 While this application provides basic functionality similar to that of Excel, it is not intended to replace Excel or other more advanced spreadsheet applications. Additionally, the application may have limitations when working with extremely large datasets or complex equations.
